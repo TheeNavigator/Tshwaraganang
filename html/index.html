@@ -12,7 +12,7 @@
 
 
 <!-- Navbar start -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Tshwaraganang Sentle</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,7 +112,6 @@
         </div>
     </div>
 </section>
-
 <!-- Service page end   -->
 
 <!-- About page start   -->
@@ -122,9 +121,38 @@
 <!-- About page end   -->
 
 <!-- Why-us page start   -->
-<section id="why-us">
-    Why-us
+<section id="why-us" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Us</h2>
+        <div class="row text-center">
+            <div class="col-md-6 mb-4 d-flex justify-content-center">
+                <div>
+                    <i class="bi bi-house-heart-fill text-primary fs-1 mb-2"></i>
+                    <h5 class="fw-bold">A home more than just a shelter</h5>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 d-flex justify-content-center">
+                <div>
+                    <i class="bi bi-heart-fill text-danger fs-1 mb-2"></i>
+                    <h5 class="fw-bold">Extending comfort, love, and warmth</h5>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 d-flex justify-content-center">
+                <div>
+                    <i class="bi bi-people-fill text-success fs-1 mb-2"></i>
+                    <h5 class="fw-bold">Accepting people from all backgrounds</h5>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 d-flex justify-content-center">
+                <div>
+                    <i class="bi bi-currency-dollar text-warning fs-1 mb-2"></i>
+                    <h5 class="fw-bold">Affiliated with top funding organizations</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
 <!-- Why-us page end   -->
 
 <!-- Gallery page start   -->
@@ -133,11 +161,66 @@
 </section>
 <!-- Gallery page end   -->
 
-<!-- Testimonials page start   -->
-<section id="testimonials">
-    Testimonials
+<!-- Testimonials Section with Carousel Start -->
+<section id="testimonials" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 title">What Our Clients Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Testimonial 1 -->
+                <div class="carousel-item active">
+                    <div class="testimonial-content p-4 shadow-sm rounded mx-auto">
+                        <p class="mb-4">"Tshwaraganang Sentle has been a blessing for our family. The care and love they provide to my mother is beyond words. The staff is always attentive, and the facilities are top-notch."</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="../images/testimony1.jpg" alt="Client Image" class="rounded-circle me-3" width="70" height="70">
+                            <div>
+                                <h5 class="mb-0">Thandeka M.</h5>
+                                <small>Family Member</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="carousel-item">
+                    <div class="testimonial-content p-4 shadow-sm rounded mx-auto">
+                        <p class="mb-4">"The environment at Tshwaraganang Sentle is warm and welcoming. I feel at peace knowing my father is in good hands. Their commitment to the well-being of the elderly is evident in everything they do."</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="../images/testimony2.jpg" alt="Client Image" class="rounded-circle me-3" width="70" height="70">
+                            <div>
+                                <h5 class="mb-0">James L.</h5>
+                                <small>Family Member</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="carousel-item">
+                    <div class="testimonial-content p-4 shadow-sm rounded mx-auto">
+                        <p class="mb-4">"I highly recommend Tshwaraganang Sentle. The personalized care and attention they provide make all the difference. The staff truly cares, and it shows in the smiles on the faces of the residents."</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="../images/testimony3.jpg" alt="Client Image" class="rounded-circle me-3" width="70" height="70">
+                            <div>
+                                <h5 class="mb-0">Noluthando K.</h5>
+                                <small>Family Member</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 </section>
-<!-- Testimonials page end   -->
+<!-- Testimonials Section with Carousel End -->
+
 
 <!-- Contact page start   -->
 <section id="contact" class="py-5">
@@ -151,7 +234,7 @@
                 </div>
             </div>
             <!-- Contact Details -->
-            <div class="col-md-6">
+            <div class="col-md-6 contact-details"> <!-- Added class here -->
                 <ul class="list-unstyled">
                     <li class="mb-3 d-flex align-items-center">
                         <i class="bi bi-geo-alt me-3 fs-4"></i>
@@ -164,21 +247,21 @@
                         <i class="bi bi-envelope me-3 fs-4"></i>
                         <div>
                             <h5 class="fw-bold">General Enquiries</h5>
-                            <p>lissahmafa996@gmail.com</p>
+                            <a href="mailto:lissahmafa996@gmail.com">lissahmafa996@gmail.com</a>
                         </div>
                     </li>
                     <li class="mb-3 d-flex align-items-center">
                         <i class="bi bi-telephone-outbound me-3 fs-4"></i>
                         <div>
                             <h5 class="fw-bold">Call Us</h5>
-                            <p> 072 801 9548</p>
+                            <a href="tel:0728019548">072 801 9548</a>
                         </div>
                     </li>
                     <li class="mb-3 d-flex align-items-center">
                         <i class="bi bi-clock me-3 fs-4"></i>
                         <div>
                             <h5 class="fw-bold">Our Timing</h5>
-                            <p>24 hrs</p>
+                            <p>Mon - Sun : 09:00 AM - 09:00 PM</p>
                         </div>
                     </li>
                 </ul>
@@ -186,6 +269,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- Contact page end   -->
 
@@ -196,8 +280,7 @@
 <!-- Footer page end   -->
 
 
-
-
+<script src="../script/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
