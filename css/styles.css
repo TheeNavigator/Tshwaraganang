@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+/* General styling for each section */
+section {
+    width: 100%;
+    height: 100vh; /* Each section takes up 100% of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start; /* Ensures smooth scrolling snaps to the start of each section */
+}
+
+/* Scroll container to enable smooth snapping behavior */
+body {
+    scroll-snap-type: y mandatory; /* Enables vertical scroll snap */
+    overflow-y: scroll; /* Ensures the page is scrollable */
+}
+
+/* home-section styles start */
+#home {
+    background-color: #0097B2;
+}
+/* home-section styles end */
+
+/* service-section styles start */
+#services {
+    background-color: #e6e6e6;
+}
+
+#services .card {
+    min-height: 100%;
+    background-color: transparent;
+    border: none;
+
+}
+
+.card-img-top{
+    height: 200px;
+    border-radius: 5px;
+}
+
+.card-title{
+    font-size: 18px;
+}
+
+.card-text{
+    font-size: 13px;
+}
+/* service-section styles end */
+
+/* about-section styles start */
+#about {
+    background-color: #cccccc;
+}
+/* about-section styles end */
+
+/* why-section styles start */
+#why-us {
+    background-color: #b3b3b3;
+}
+/* why-section styles end */
+
+/* gallery-section styles start */
+#gallery {
+    background-color: #999999;
+}
+/* gallery-section styles end */
+
+/* testimonials-section styles start */
+#testimonials {
+    background-color: #808080;
+}
+/* testimonials-section styles end */
+
+/* contact-section styles start */
+#contact {
+    background-color: #666666;
+}
+/* contact-section styles end */
+
+/* footer-section styles start */
+#footer {
+    background-color: #4d4d4d;
+    height: auto; /* Footer might be shorter than other sections */
+    padding: 20px;
+    text-align: center;
+}
+/* footer-section styles end */
