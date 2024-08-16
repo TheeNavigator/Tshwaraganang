@@ -58,32 +58,54 @@ body {
 
 /* about-section styles start */
 #about {
-    background-color: #cccccc;
+    background-color: #e6e6e6;
 }
 /* about-section styles end */
 
 /* why-section styles start */
 #why-us {
-    background-color: #b3b3b3;
+    background-color: #e6e6e6;
 }
 /* why-section styles end */
 
 /* gallery-section styles start */
 #gallery {
-    background-color: #999999;
+    background-color: #e6e6e6;
 }
 /* gallery-section styles end */
 
 /* testimonials-section styles start */
 #testimonials {
-    background-color: #808080;
+    background-color: #e6e6e6;
 }
 /* testimonials-section styles end */
 
 /* contact-section styles start */
 #contact {
-    background-color: #666666;
+    background-color: #e6e6e6;
 }
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+#contact .list-unstyled {
+    padding: 0;
+    list-style-type: none;
+}
+
+#contact ul li h5 {
+    font-size: 18px;
+    color: #333;
+}
+
+#contact ul li p {
+    font-size: 16px;
+    color: #555;
+}
+
 /* contact-section styles end */
 
 /* footer-section styles start */
