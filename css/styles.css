@@ -4,8 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Oswald;
-    font-weight: 550;
+    font-family: "Arial";
+
 }
 
 /* General styling for each section */
@@ -16,6 +16,14 @@ section {
     align-items: center;
     justify-content: center;
     scroll-snap-align: start; /* Ensures smooth scrolling snaps to the start of each section */
+
+}
+
+.text-center.title{
+    font-size: 45px;
+    margin-bottom: 5rem !important;
+    color: black;
+    font-weight: bold;
 }
 
 /* Scroll container to enable smooth snapping behavior */
@@ -53,20 +61,20 @@ body {
     min-height: 100%;
     background-color: transparent;
     border: none;
-
 }
 
 .card-img-top{
-    height: 200px;
+    height: 220px;
     border-radius: 5px;
 }
 
 .card-title{
-    font-size: 18px;
+    font-size: 22px;
+    color: #0097B2;
 }
 
 .card-text{
-    font-size: 13px;
+    font-size: 18px;
 }
 
 /* Define keyframe animations */
@@ -113,6 +121,7 @@ body {
 }
 /* about-section styles end */
 
+
 /* why-section styles start */
 #why-us {
     /*background-color: #e6e6e6;*/
@@ -123,6 +132,14 @@ body {
     overflow: hidden;
 }
 
+#why-us .bi{
+    font-size: 5rem !important;
+}
+
+#why-us .fw-bold{
+    font-size: 2rem !important;
+}
+
 #why-us::before {
     content: '';
     position: absolute;
@@ -130,8 +147,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../images/why-us-bg.jpg") no-repeat center center/cover scroll;/* Set the background image */
-    filter: blur(8px); /* Apply blur effect to the background image */
+    background: url("../images/handholding.jpg") no-repeat center center/cover scroll;/* Set the background image */
+    filter: blur(15px); /* Apply blur effect to the background image */
     z-index: 1;
 
 }
@@ -140,8 +157,6 @@ body {
     position: relative;
     z-index: 2; /* Ensure content is above the overlay */
 }
-
-
 /* why-section styles end */
 
 /* gallery-section styles start */
@@ -152,18 +167,37 @@ body {
 
 /* testimonials-section styles start */
 #testimonials {
-    background-color: #e6e6e6;
-    color: #333;
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#testimonials::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(10px); /* Adjust the blur value as needed */
+    z-index: 1;
+}
+
+#testimonials .container-fluid {
+    position: relative;
+    z-index: 2; /* This ensures the content stays above the blurry background */
 }
 
 
 .testimonial-content {
     background-color: transparent;
-    box-shadow: 3px 3px;
     border-radius: 10px;
     padding: 30px;
     max-width: 600px;
     position: relative;
+    color: white;
+    font-size: 25px;
 }
 
 .testimonial-content::before {
@@ -203,12 +237,18 @@ body {
     font-size: 14px;
     color: #555;
 }
-
 /* testimonials-section styles end */
+
+
 
 /* contact-section styles start */
 #contact {
     background-color: #e6e6e6;
+
+}
+
+.button{
+    margin-bottom: 3rem;
 }
 
 .map-container {
@@ -267,7 +307,14 @@ body {
     opacity: 0; /* Initially hidden */
 }
 
+.bi{
+    color: #0097B2;
+    font-size: 25px;
+}
 
+.bi:hover{
+    color: lightblue;
+}
 
 /* contact-section styles end */
 
