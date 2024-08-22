@@ -433,6 +433,7 @@ section {
     }
 
     .navbar-toggler {
+        background-color: white;
         position: fixed;
         top: 10px; /* Adjust as needed */
         right: 15px; /* Adjust as needed */
@@ -496,14 +497,14 @@ section {
     top: 56px; /* Adjust based on your navbar height */
     right: 0;
     width: 100%;
-    background-color: white;
     overflow-y: auto;
     transition: max-height 0.3s ease; /* Slide down effect */
-    max-height: 0; /* Hidden by default */
+
 }
 
 /* When the navbar is expanded */
 .navbar-collapse.show {
+    background-color: white;
     max-height: 100vh; /* Fully expand when shown */
 }
 
