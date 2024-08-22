@@ -153,6 +153,41 @@ body {
 .row .img-fluid{
     height: 400px;
 }
+
+/* Define keyframe animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply animations to elements */
+.text-justify.animate {
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0; /* Initially hidden */
+}
+
+.img-fluid.rounded.animate {
+    animation: slideInRight 1s ease-out forwards;
+    opacity: 0; /* Initially hidden */
+}
+
 /* about-section styles end */
 
 
@@ -176,14 +211,28 @@ body {
 /* why-section styles end */
 
 /* gallery-section styles start */
-#gallery {
-    background-color: #e6e6e6;
+/* Define keyframe animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Apply animations to gallery items */
 .gallery-item {
     overflow: hidden;
     position: relative;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transition: transform 0.7s ease, box-shadow 0.7s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+.gallery-item.animate {
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .gallery-item img {
@@ -200,6 +249,7 @@ body {
 .gallery-item:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 /* gallery-section styles end */
 
 /* testimonials-section styles start */

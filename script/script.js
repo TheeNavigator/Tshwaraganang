@@ -99,3 +99,50 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update the navbar background when the user scrolls
     window.addEventListener('scroll', updateNavbarBackground);
 });
+
+//about animation
+document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.querySelector("#about .text-justify");
+    const imageElement = document.querySelector("#about .img-fluid.rounded");
+
+    // Create an intersection observer
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the 'animate' class when the element is in view
+                entry.target.classList.add("animate");
+                // Unobserve after animation is triggered
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    // Observe text and image
+    observer.observe(textElement);
+    observer.observe(imageElement);
+});
+
+//gallery animation
+document.addEventListener("DOMContentLoaded", function() {
+    const galleryItems = document.querySelectorAll("#gallery .gallery-item");
+
+    // Create an intersection observer
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the 'animate' class when the element is in view
+                entry.target.classList.add("animate");
+                // Unobserve after animation is triggered
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    // Observe each gallery item
+    galleryItems.forEach(item => {
+        observer.observe(item);
+    });
+});
+
+
+
