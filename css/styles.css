@@ -1,40 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+}
 
+/* Ensure no horizontal overflow */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* General styling for each section */
 section {
     width: 100%;
-    height: 100vh; /* Each section takes up 100% of the viewport height */
+    min-height: 100vh; /* Ensure each section has a minimum height */
     display: flex;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: start; /* Ensures smooth scrolling snaps to the start of each section */
+    scroll-snap-align: start;
+    position: relative; /* Prevent overlapping */
+    padding: 2rem 0; /* Add vertical padding */
 }
 
-.text-center.title{
+/* Container styling */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+/* General Title Styling */
+.text-center.title {
     font-size: 45px;
     margin-top: 5rem !important;
     color: black;
     font-weight: bold;
 }
 
-/* Scroll container to enable smooth snapping behavior */
-body {
-    scroll-snap-type: y mandatory; /* Enables vertical scroll snap */
-    overflow-y: scroll; /* Ensures the page is scrollable */
-}
-
 /* Initial navbar styling */
 .navbar {
     background-color: transparent; /* Transparent to inherit from home section */
     transition: background-color 0.5s ease; /* Smooth transition */
+    position: fixed; /* Fix the navbar to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050; /* Ensure it's above other content */
 }
 
 /* Scrolled navbar styling */
@@ -49,13 +64,12 @@ body {
     font-weight: bold;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-weight: bold;
     color: #ffc107 !important;
 }
 
-
-/* home-section styles start */
+/* Home Section Styles */
 #home {
     background-color: #0097B2;
 }
@@ -69,18 +83,17 @@ body {
     animation: slideInDown 1.5s ease-out;
     font-size: 35px; /* Default font size for large screens */
     margin: 0 auto; /* Center the heading horizontally */
-    /*max-width: 90%; !* Limit the width to avoid overflow *!*/
 }
 
+/* Ensure image scales appropriately */
 .title-image {
     display: block; /* Ensure image is a block element */
-    width: 800px; /* Ensure it fills the column width */
-    height: 500px; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it scales within the viewport */
+    height: auto; /* Maintain aspect ratio */
     margin-top: 0; /* Remove any margin from the top */
 }
-/* home-section styles end */
 
-/* service-section styles start */
+/* Service Section Styles */
 #services {
     background-color: #e6e6e6;
 }
@@ -91,17 +104,17 @@ body {
     border: none;
 }
 
-.card-img-top{
+.card-img-top {
     height: 220px;
     border-radius: 5px;
 }
 
-.card-title{
+.card-title {
     font-size: 20px;
     color: #0097B2;
 }
 
-.card-text{
+.card-text {
     font-size: 18px;
 }
 
@@ -139,18 +152,16 @@ body {
     animation-delay: 1.5s;
 }
 
-/* service-section styles end */
-
-/* about-section styles start */
+/* About Section Styles */
 #about {
     background-color: #ffffff;
 }
 
-.row .text-justify{
+.row .text-justify {
     font-size: 20px;
 }
 
-.row .img-fluid{
+.row .img-fluid {
     height: 400px;
 }
 
@@ -188,29 +199,24 @@ body {
     opacity: 0; /* Initially hidden */
 }
 
-/* about-section styles end */
-
-
-/* why-section styles start */
+/* Why Section Styles */
 #why-us {
-   background-color: #e6e6e6;
+    background-color: #e6e6e6;
 }
 
-#why-us .bi{
+#why-us .bi {
     font-size: 20px;
 }
 
-#why-us .fw-bold{
+#why-us .fw-bold {
     font-size: 20px;
 }
 
-.container {
-    position: relative;
-    z-index: 2; /* Ensure content is above the overlay */
+/* Gallery Section Styles */
+#gallery {
+    background-color: #ffffff;
 }
-/* why-section styles end */
 
-/* gallery-section styles start */
 /* Define keyframe animations */
 @keyframes fadeInUp {
     from {
@@ -237,8 +243,8 @@ body {
 
 .gallery-item img {
     display: block;
-    width: 100%;
-    height: 200px !important;
+    max-width: 100%; /* Ensure it scales within the container */
+    height: auto; /* Maintain aspect ratio */
     transition: transform 0.5s ease;
 }
 
@@ -250,9 +256,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* gallery-section styles end */
-
-/* testimonials-section styles start */
+/* Testimonials Section Styles */
 #testimonials {
     background: url("../images/bg.jpg") no-repeat;
     background-size: cover;
@@ -275,7 +279,6 @@ body {
     position: relative;
     z-index: 2; /* This ensures the content stays above the blurry background */
 }
-
 
 .testimonial-content {
     background-color: transparent;
@@ -324,17 +327,13 @@ body {
     font-size: 14px;
     color: #555;
 }
-/* testimonials-section styles end */
 
-
-
-/* contact-section styles start */
+/* Contact Section Styles */
 #contact {
     background-color: #e6e6e6;
-
 }
 
-.button{
+.button {
     margin-bottom: 3rem;
 }
 
@@ -358,7 +357,6 @@ body {
     font-size: 16px;
     color: #555;
 }
-
 
 /* Define keyframe animations */
 @keyframes slideInLeft {
@@ -394,22 +392,54 @@ body {
     opacity: 0; /* Initially hidden */
 }
 
-.bi{
+.bi {
     color: #0097B2;
     font-size: 25px;
 }
 
-.bi:hover{
+.bi:hover {
     color: lightblue;
 }
 
-/* contact-section styles end */
-
-/* footer-section styles start */
+/* Footer Section Styles */
 #footer {
     background-color: #4d4d4d;
     height: auto; /* Footer might be shorter than other sections */
     padding: 20px;
     text-align: center;
 }
-/* footer-section styles end */
+
+/* Media Queries */
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        top: 56px; /* Adjust if the navbar height changes */
+        right: 0;
+        width: 100%; /* Full width */
+        height: calc(100vh - 56px); /* Full viewport height minus navbar height */
+        background-color: white; /* White background for collapsed menu */
+        overflow-y: auto; /* Ensure scroll if needed */
+        transform: translateX(100%); /* Start off-screen */
+    }
+
+    .navbar-collapse.show {
+        transform: translateX(0); /* Slide in */
+
+    }
+
+    .navbar-nav .nav-link {
+        display: block; /* Make links full-width */
+        padding: 15px 20px; /* Add padding for better click area */
+    }
+
+    .navbar-toggler {
+        position: fixed;
+        top: 10px; /* Adjust as needed */
+        right: 15px; /* Adjust as needed */
+        z-index: 1060; /* Ensure it is above other content */
+    }
+
+    #home h1{
+        padding-top: 50px;
+    }
+
+}

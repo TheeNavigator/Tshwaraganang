@@ -145,4 +145,20 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+//navbar
+document.addEventListener('DOMContentLoaded', function () {
+    var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (window.innerWidth < 992) { // Adjust if needed for your breakpoint
+                navbarCollapse.classList.remove('show');
+                navbarToggler.classList.add('collapsed');
+            }
+        });
+    });
+});
+
 
