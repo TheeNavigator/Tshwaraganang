@@ -22,7 +22,7 @@ section {
     justify-content: center;
     scroll-snap-align: start;
     position: relative; /* Prevent overlapping */
-    padding: 2rem 0; /* Add vertical padding */
+    padding-top: 10px !important;
 }
 
 /* Container styling */
@@ -411,6 +411,7 @@ section {
 
 /* Media Queries */
 @media (max-width: 767.98px) {
+
     .navbar-collapse {
         top: 56px; /* Adjust if the navbar height changes */
         right: 0;
@@ -440,6 +441,15 @@ section {
 
     #home h1{
         padding-top: 50px;
+    }
+
+    .row .text-justify{
+        font-size: 15px;
+        justify-content: center;
+    }
+
+    .row .img-fluid{
+        display: none;
     }
 
 }
