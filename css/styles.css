@@ -328,6 +328,23 @@ section {
     color: #555;
 }
 
+/* partners section styles*/
+#partners .card {
+    border: none;
+    text-align: center;
+}
+
+#partners .card-img-top {
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+#partners .card-body {
+    padding: 20px;
+}
+
+
 /* Contact Section Styles */
 #contact {
     background-color: #e6e6e6;
@@ -442,7 +459,7 @@ section {
 
     .container .text-center{
         font-size: 30px;
-
+        padding-top: -5rem;
     }
 
     #footer .mb-2{
@@ -456,9 +473,6 @@ section {
         display: none !important;
     }
 
-    #section{
-        padding-top: 5px !important;
-    }
 
 }
 
