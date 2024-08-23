@@ -43,7 +43,7 @@ section {
 
 /* Initial navbar styling */
 .navbar {
-    background-color: transparent; /* Transparent to inherit from home section */
+    background-color: white; /* Transparent to inherit from home section */
     transition: background-color 0.5s ease; /* Smooth transition */
     position: fixed; /* Fix the navbar to the top */
     top: 0;
@@ -412,32 +412,9 @@ section {
 /* Media Queries */
 @media (max-width: 767.98px) {
 
-    .navbar-collapse {
-        top: 56px; /* Adjust if the navbar height changes */
-        right: 0;
-        width: 100%; /* Full width */
-        height: calc(100vh - 56px); /* Full viewport height minus navbar height */
-        background-color: white; /* White background for collapsed menu */
-        overflow-y: auto; /* Ensure scroll if needed */
-        transform: translateX(100%); /* Start off-screen */
-    }
-
-    .navbar-collapse.show {
-        transform: translateX(0); /* Slide in */
-
-    }
-
     .navbar-nav .nav-link {
         display: block; /* Make links full-width */
         padding: 15px 20px; /* Add padding for better click area */
-    }
-
-    .navbar-toggler {
-        background-color: white;
-        position: fixed;
-        top: 10px; /* Adjust as needed */
-        right: 15px; /* Adjust as needed */
-        z-index: 1060; /* Ensure it is above other content */
     }
 
     #home h1{
@@ -479,38 +456,4 @@ section {
 
 }
 
-/* Base styles for the navbar-toggler button */
-.navbar-toggler {
-    border: none;
-    outline: none;
-    padding: 0;
-    background-color: transparent;
-    position: fixed;
-    top: 10px;
-    right: 15px;
-    z-index: 1060;
-}
-
-
-/* Adjust the navbar-collapse to slide down properly */
-.navbar-collapse {
-    top: 56px; /* Adjust based on your navbar height */
-    right: 0;
-    width: 100%;
-    overflow-y: auto;
-    transition: max-height 0.3s ease; /* Slide down effect */
-
-}
-
-/* When the navbar is expanded */
-.navbar-collapse.show {
-    background-color: white;
-    max-height: 100vh; /* Fully expand when shown */
-}
-
-/* Ensure the links are properly aligned */
-.navbar-nav .nav-link {
-    display: block;
-    padding: 15px 20px;
-}
 
