@@ -162,3 +162,33 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+const phrases = [
+    "Where Care Meets Compassion",
+    "A Nurturing Environment for the Elderly",
+    "Your Home Away from Home",
+    "Caring for the Ones You Love"
+];
+
+let index = 0;
+const rotatingText = document.getElementById('rotating-text');
+
+function rotateText() {
+    rotatingText.innerHTML = `<span class="highlight">${phrases[index]}</span>`;
+    index = (index + 1) % phrases.length;
+}
+
+setInterval(rotateText, 3000); // Change every 3 seconds
+
+
+function showVideo() {
+    document.querySelector('.play-button').style.display = 'none';
+    document.getElementById('video-popup').style.display = 'flex';
+    document.getElementById('video').play();
+}
+
+function closeVideo() {
+    document.getElementById('video-popup').style.display = 'none';
+    document.querySelector('.play-button').style.display = 'flex';
+    document.getElementById('video').pause();
+    document.getElementById('video').currentTime = 0; // Optional: Reset video to start
+}
